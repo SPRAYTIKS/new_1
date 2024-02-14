@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -12,9 +12,34 @@
     <div id="main">
         <h1>Service men</h1>
         <img src="img/logo.png">
-        <p>Lorem ipsum dolor sit amet, consetetur adipising elit. Acucusantium ipsum magni, molestias.</p>
+        <p><i>-Пошив по лекалам на 95% марок легковых авто</i></p>
+        <p><i>-Экокожа "Аригон", иск. замша "Алькантара", ткань</i></p>
+        <p><i>-Контроль качества и гарантия 1 год</i></p>
+        <p><i>-Бесплатная доставка по России и подарок на выбор</i></p>
         <button id="buy">Купить</button>
     </div>
+    <form id="form">
+        <input type="text" placeholder="Имя" id="user_name">
+        <input type="text" placeholder="Email" id="ueser_email">
+        <input type="text" placeholder="Телефон" id="user_number">
+        <botton id="older">Отправить</botton>
+    </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let tg = window.Telegram.WabApp;
+        let byu = document.getElementById("buy");
+        let order = document.getElementById("order");
+
+        buy.addEventListener("click", () => {
+            document.getElementById("main").style.display = "none";
+            document.getElementById("form").style.display = "block";
+            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name
+        });
+
+
+        order.addEventListener("click", () => {
+            tg.close();
+        });
+    </script>
 </body>
 </html>

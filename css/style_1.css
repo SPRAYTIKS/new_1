@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrart:wqht@200;500&display=swap')
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
@@ -47,4 +49,23 @@ button {
 
 button:hover {
     background: var(--tg-theme-secondary-bg-color);
+}
+
+#form {
+    display: none;
+    text-align: center;
+}
+
+input {
+    width: 90%;
+    outline: none;
+    margin: 10px 5%;
+    padding: 15px 10px;
+    font-size: 14px;
+    bolder: 2px solid silver;
+    bolder-radius: 5px;
+}
+
+input:focus {
+    bolder-color: #db5d5d;
 }
